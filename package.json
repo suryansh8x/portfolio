@@ -1,0 +1,35 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "npm@12.2.3",
+  "dependencies": {
+    "@cloudflare/workers-response-store": "^1.2.0",
+    "@vinext/cloudflare": "^1.4.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-server-dom-webpack": "^19.3.1",
+    "vinext": "^1.4.6"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^2.0.0-rc.5",
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "^6.3.0",
+    "@vitejs/plugin-rsc": "^0.5.39",
+    "cf": "^1.0.0-rc.6",
+    "tailwindcss": "latest",
+    "typescript": "latest",
+    "vite": "^8.3.0"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "start": "vite preview",
+    "deploy": "vinext-cloudflare deploy --warm-cache",
+    "deploy:response-store": "cf deploy --prebuilt --mode production --worker portfolio-response-store"
+  }
+}
